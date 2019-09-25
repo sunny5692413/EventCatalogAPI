@@ -18,15 +18,13 @@ namespace EventCatalogAPI.Data
         public DbSet<EventLocation> EventLocations{ get; set; }
         public DbSet<EventPrice> EventPrices { get; set; }
         public DbSet<EventItem> EventItems{ get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<EventType>(ConfigureEventType);
             modelBuilder.Entity<EventLocation>(ConfigureEventLocation);
             modelBuilder.Entity<EventPrice>(ConfigureEventPrice);
             modelBuilder.Entity<EventItem>(ConfigureEventItem);
-
-
-
         }
 
         private void ConfigureEventItem(EntityTypeBuilder<EventItem> builder)
