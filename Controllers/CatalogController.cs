@@ -13,11 +13,11 @@ namespace EventCatalogAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EventController : ControllerBase
+    public class CatalogController : ControllerBase
     {
         private readonly EventContext _context;
         private readonly IConfiguration _config;
-        public EventController(EventContext context, IConfiguration config)
+        public CatalogController(EventContext context, IConfiguration config)
         {
             _context = context;
             _config = config;
